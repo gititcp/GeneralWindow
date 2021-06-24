@@ -66,6 +66,11 @@ public abstract class BaseDialogBuilder implements IBaseDialog {
         return Gravity.CENTER;
     }
 
+    @Override
+    public float getDimAmount() {
+        return 0.6f;
+    }
+
     /**
      * 内部类
      */
@@ -108,6 +113,7 @@ public abstract class BaseDialogBuilder implements IBaseDialog {
                 } else {
                     lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
                 }
+                lp.dimAmount = getDimAmount();
                 getWindow().setAttributes(lp);
                 getWindow().setGravity(gravityType());
                 getWindow().setBackgroundDrawable(null);

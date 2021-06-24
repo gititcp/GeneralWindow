@@ -32,4 +32,11 @@ public interface IBaseDialog {
      * @return
      */
     int gravityType();
+
+    /**
+     * dialog未显示区域的透明度 0f~1.0f
+     *
+     * @return
+     */
+    float getDimAmount();
 }
